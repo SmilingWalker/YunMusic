@@ -1,0 +1,19 @@
+<!--pages/others/others.wxml-->
+<view class="container">
+    <!-- <mp-form>
+        <mp-cells title="title" footer="footer">
+            <mp-cell title="测试名" ext-class="ext" class="ext" >
+                <view class="aaa">
+                    <input value="AA"  />
+                    <input value="BB"  />
+                </view>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="opt" >
+        <view class="opa"></view>
+        <view class="opb"></view>
+    </view> -->
+    <mp-searchbar bindselectresult="selectResult" placeholder="搜索" search="{{search}}"></mp-searchbar>
+</view>
+

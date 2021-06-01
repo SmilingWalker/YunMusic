@@ -1,0 +1,26 @@
+<!--pages/musicPlayer/musicPlayer.wxml-->
+<view class="playerContainer">
+  <text class="author">{{song.ar[0].name}}</text>
+  <view class="cicle"></view>
+  <image class="needle {{isPlaying && 'rotateNeedle'}}" src="/static/images/song/needle.png"></image>
+  <view class="discContainer">
+    <image class="disc" src="/static/images/song/disc.png" />
+    <image class="authorImg {{isPlaying && 'rotateImg'}}" src="{{song.al.picUrl}}" />
+  </view>
+  <view class="musicContainer">
+    <text class="iconfont icon-suijibofang-wangyiicon"></text>
+    <text class="iconfont icon-xiangyiqu" id="pre" bind:tap="handleSwitch"></text>
+    <text class="iconfont {{!isPlaying ?'icon-zanting':'icon-bofang-wangyiicon'}} big" bind:tap="handleMusicPlay"></text>
+    <text class="iconfont icon-xiangyiqu-copy" id="next" bind:tap="handleSwitch"></text>
+    <text class="iconfont icon-caidan1"></text>
+  </view>
+  <view class="progressbarContainer">
+    <text class="now">{{currentTime}}</text>
+    <view class="progressBar">
+      <view class="currentBar" style="width:{{barWidth+ 'rpx'}}">
+        <view class="currentCircle"></view>
+      </view>
+    </view>
+    <text class="end">{{duration}}</text>
+  </view>
+</view>

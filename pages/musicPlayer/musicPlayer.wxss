@@ -1,0 +1,173 @@
+/* pages/musicPlayer/musicPlayer.wxss */
+.playerContainer{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author{
+    color: #fff;
+    margin-top: 10rpx;
+}
+
+.cicle{
+    position: relative;
+    top: 40rpx;
+    z-index: 100;
+
+
+    height: 60rpx;
+    width: 60rpx;
+    background-color: #fff;
+    border-radius: 50%;
+
+}
+
+.needle{
+    position: relative;
+    left: 56rpx;
+    z-index: 90;
+
+    width: 192rpx;
+    height: 284rpx;
+
+    transform-origin: 40rpx 0;
+    transform: rotate(-20deg);
+    transition: linear 0.5s ;
+}
+
+
+.rotateImg{
+
+    animation: disc 5s 0.5s linear infinite;
+}
+
+@keyframes disc {
+    from{
+
+    }
+    to{
+        transform: rotate(360deg);
+    }    
+}
+
+.rotateNeedle{
+    
+    transform: rotate(0deg);
+}
+
+.discContainer{
+    position: relative;
+    top:-150rpx;
+    height: 600rpx;
+    width: 600rpx;
+}
+
+.discContainer .disc{
+    height: 600rpx;
+    width: 600rpx;
+}
+
+.discContainer .authorImg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    height: 370rpx;
+    width: 370rpx;
+    border-radius: 50%;
+}
+
+.musicContainer{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: 70rpx;
+}
+
+.musicContainer text{
+
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+
+    width: 20%;
+    font-size: 50rpx;
+    color: #fff;
+}
+
+.musicContainer .big{
+    font-size: 90rpx;
+}
+
+
+
+/* 进度条 */
+.progressbarContainer{
+    position: absolute;
+    bottom: 180rpx;
+
+    width: 640rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    display: flex;
+
+}
+
+.progressbarContainer text{
+    font-size: 32rpx;
+}
+.progressbarContainer .now{
+    position: absolute;
+    left: 0;
+}
+
+.progressbarContainer .end{
+    position: absolute;
+    right: 0;
+}
+
+.progressbarContainer .progressBar{
+    
+    width: 460rpx;
+    background-color: rgb(27, 27, 27);
+    height: 6rpx;
+    /* 居中 */
+    margin: auto;
+    border-radius: 3rpx;
+
+}
+
+.progressbarContainer .currentBar{
+
+    position: relative;
+    z-index: 99;
+
+    height: 6rpx;
+    background-color: red;
+}
+
+.progressbarContainer .currentBar .currentCircle{
+    
+    position: absolute;
+    right: -5rpx;
+    top: -2rpx;
+    height: 10rpx;
+    width: 10rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+
+

@@ -1,0 +1,110 @@
+.header{
+    position: relative;
+    height: 300rpx;
+    width: 100%;
+}
+
+.header image{
+    height: 100%;
+    width: 100%;
+}
+
+.date{
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    margin-left: -80rpx;
+    margin-top: -25rpx;
+
+    height: 80rpx;
+    width: 200rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.date .Day{
+    font-size: 35rpx;
+}
+
+.date .Month{
+    font-size: 30rpx;
+}
+
+.recommendList{
+    padding: 0 20rpx;
+    position: relative;
+    top: -20rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+
+}
+
+.ListHeader{
+    height: 80rpx;
+    line-height: 80rpx;
+}
+/* 列表推荐区域 */
+.ListHeader .more{
+    float: right;
+}
+
+.recommendScroll{
+    height: calc(100vh - 380rpx);
+}
+
+.scrollItem{
+    display: flex;
+    height: 80;
+    margin-bottom: 20rpx;
+}
+
+.scrollItem .scrollImg{
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 10rpx;
+}
+
+.scrollItem .scollText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+.scrollItem text{
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: left;
+
+    max-width: 300rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.scrollItem .name{
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.scrollItem .author{
+    font-size: 25rpx;
+}
+
+.scrollItem .detail{
+    position: absolute;
+    right: 10rpx;
+
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: right;
+}
+
+.playAll{
+    color: black;
+    margin-left: 20rpx;
+    font-weight: bolder;
+}

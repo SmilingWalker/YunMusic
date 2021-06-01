@@ -1,0 +1,64 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <swiper  class="banners" indicator-dots="true" autoplay="{{true}}" indicator-active-color="#dd001b" indicator-color="ivory">
+   <swiper-item wx:for="{{bannerList}}" wx:key="bannerId" >
+    <image src="{{item.pic}}" />
+   </swiper-item>
+
+ </swiper>
+
+  <!-- 横向列表对应的 导航区 -->
+  <view class="navContainer">
+    <view class="navItem" bind:tap="toRecommendPage">
+      <text class="iconfont icon-tuijian1" ></text>
+      <text >每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-gedan1" ></text>
+      <text >歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-paixingbang" ></text>
+      <text >排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai1" ></text>
+      <text >电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhibobofangshexiangjitianxianxianxing1" ></text>
+      <text >直播</text>
+    </view>
+  </view>
+
+  <!-- 歌曲推荐部分 -->
+  <view class="recommendContainer" >
+    <NavHeader title="今日推荐" content="为你精心推荐"></NavHeader>
+    <!-- 导航滑块区域 -->
+    <scroll-view class="recommendScoll" enable-flex="true" scroll-x="true">
+      <view class="scrollItem" wx:for="{{recommendList}}" wx:for-item="recommendItem" wx:key="id" data-index="{{recommendItem.id}}" bind:tap="handleToAlbum">
+        <image src="{{recommendItem.picUrl}}" />
+        <text>{{recommendItem.name}}</text>
+      </view>
+     </scroll-view>
+  </view>
+  <!-- 排行榜区域 -->
+  <view class="rankingList">
+    <NavHeader title="歌曲排行榜" content="热歌风向标"></NavHeader>
+    
+    <swiper class="rankingSwiper" next-margin="50rpx" circular>
+      <swiper-item wx:for="{{rankingList}}" wx:key="name" >
+        <view class="swipeItem">
+          <text class="title">{{item.name}}</text>
+          <view class="musicItem" wx:for="{{item.tracks}}" wx:for-item="musicItem" wx:key="id">
+            <image src="{{musicItem.al.picUrl}}" />
+            <text class="musicOrder">{{index+1}}</text>
+            <text class="musicName">{{musicItem.name}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  
+</view>
