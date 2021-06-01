@@ -3,4 +3,6 @@ new now I have insert some new information
 
 
 
+
 this is the master change
+this is the hot-fox change
